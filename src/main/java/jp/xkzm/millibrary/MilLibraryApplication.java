@@ -1,13 +1,13 @@
-package jp.xkzm.millibrarycontroller;
+package jp.xkzm.millibrary;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class MilLibraryControllerApplication {
+public class MilLibraryApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(MilLibraryControllerApplication.class, args);
+        SpringApplication.run(MilLibraryApplication.class, args);
     }
 
 }
