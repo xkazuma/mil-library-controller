@@ -1,0 +1,3 @@
+[submodule "src/main/mil-library-frontend"]
+	path = src/main/mil-library-frontend
+	url = git@github.com:xkazuma/mil-library.git
