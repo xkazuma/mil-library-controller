@@ -1,12 +1,13 @@
 package jp.xkzm.millibrary.service;
 
+import jp.xkzm.millibrary.dto.LiteratureRequest;
 import jp.xkzm.millibrary.entity.Literature;
 import jp.xkzm.millibrary.repository.LiteratureRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Example;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -22,6 +23,30 @@ public class LiteratureService {
 
     }
 
+    public void create(LiteratureRequest literatureRequest) {
+
+        literatureRepository.save(createLiterature(literatureRequest));
+
+    }
+
+    private Literature createLiterature(LiteratureRequest literatureRequest) {
+
+        Date       now        = new Date();
+        Literature literature = new Literature(
+                literatureRequest.getIsbn(),
+                literatureRequest.getAuthor(),
+                literatureRequest.getTitle(),
+                literatureRequest.getDescription(),
+                literatureRequest.getImage(),
+                now,
+                now,
+                null
+        );
+
+        return literature;
+
+    }
+
     public List<Literature> searchAll() {
 
         return literatureRepository.findAll();
@@ -31,6 +56,7 @@ public class LiteratureService {
     public List<Literature> searchByIsbn(String isbn) {
 
         Literature literature = new Literature();
+
         literature.setIsbn(isbn);
 
         Optional<Literature> optionalL = literatureRepository.findByIsbn(isbn);
@@ -45,6 +71,4 @@ public class LiteratureService {
         return literatureRepository.findByTitleLike("%" + title + "%");
 
     }
-
-
 }

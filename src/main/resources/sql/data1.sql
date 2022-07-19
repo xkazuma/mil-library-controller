@@ -1,0 +1,18 @@
+insert into millibrary.literature (isbn, author, title, description, num, image, created, updated, deleted)
+values  ('9784041121887', '西出　ケンゴロー/TYPE-MOON', 'Fate／Grand　Order　-Epic　of　Remnant-　亜種特異点EX　深海電脳楽土　SE．RA．PH　（6）', '', 1, 'https://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/1887/9784041121887_1_2.jpg?_ex=120x120', '2022-07-19 14:47:16.552', '2022-07-19 14:47:16.552', null),
+        ('9784098608133', '石塚 真一/NUMBER8', 'BLUE GIANT EXPLORER（1）', '', 1, 'https://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/8133/9784098608133.jpg?_ex=120x120', '2022-07-19 14:47:16.647', '2022-07-19 14:47:16.647', null),
+        ('9784098610037', '石塚 真一/NUMBER8', 'BLUE GIANT EXPLORER（2）', '', 1, 'https://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/0037/9784098610037.jpg?_ex=120x120', '2022-07-19 14:47:16.63', '2022-07-19 14:47:16.63', null),
+        ('9784098611003', '石塚 真一/NUMBER8', 'BLUE GIANT EXPLORER（3）', '', 1, 'https://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/1003/9784098611003_1_3.jpg?_ex=120x120', '2022-07-19 14:47:16.63', '2022-07-19 14:47:16.63', null),
+        ('9784098611775', '石塚 真一/NUMBER8', 'BLUE GIANT EXPLORER（4）', '', 1, 'https://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/1775/9784098611775_1_3.jpg?_ex=120x120', '2022-07-19 14:47:16.63', '2022-07-19 14:47:16.63', null),
+        ('9784098612772', '石塚 真一/NUMBER8', 'BLUE GIANT EXPLORER（5）', '', 1, 'https://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/2772/9784098612772_1_3.jpg?_ex=120x120', '2022-07-19 14:47:16.552', '2022-07-19 14:47:16.552', null),
+        ('9784098613694', '石塚 真一/NUMBER8', 'BLUE GIANT EXPLORER（6）', '', 1, 'https://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/3694/9784098613694_1_3.jpg?_ex=120x120', '2022-07-19 14:47:16.552', '2022-07-19 14:47:16.552', null),
+        ('9784297117122', '奥村晴彦/黒木裕介', '［改訂第8版］LaTeX2ε美文書作成入門', '', 1, 'https://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/7122/9784297117122.jpg?_ex=120x120', '2022-07-19 14:47:16.552', '2022-07-19 14:47:16.552', null),
+        ('9784865103175', '富士通エフ・オー・エム株式会社 （FOM出版）', 'Microsoft Office Specialist Excel 2016 対策テキスト& 問題集', '', 1, 'https://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/3175/9784865103175.jpg?_ex=120x120', '2022-07-19 14:47:16.63', '2022-07-19 14:47:16.63', null),
+        ('9784865103816', '富士通エフ・オー・エム株式会社 （FOM出版）', 'よくわかるMicrosoft　Excel　2019応用', '', 1, 'https://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/3816/9784865103816.jpg?_ex=120x120', '2022-07-19 14:47:16.552', '2022-07-19 14:47:16.552', null),
+        ('9784905176466', '', 'FOREX NOTE 2022 為替手帳（黒）', '', 1, 'https://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/6466/9784905176466.jpg?_ex=120x120', '2022-07-19 14:47:16.63', '2022-07-19 14:47:16.63', null),
+        ('9784938927318', '富士通ラーニングメディア', '日商PC検定試験 データ活用 2級 公式テキスト&問題集 Microsoft Excel 2019/2016 対応', '', 1, 'https://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/7318/9784938927318_1_2.jpg?_ex=120x120', '2022-07-19 14:47:16.552', '2022-07-19 14:47:16.552', null),
+        ('9784938927783', '富士通ラーニングメディア', 'よくわかる 初心者のための Microsoft Excel 2021 Office 2021／Microsoft 365 対応', 'Ｏｆｆｉｃｅ２０２１／Ｍｉｃｒｏｓｏｆｔ３６５対応。覚えておきたいＥｘｃｅｌの基本操作を厳選して解説。読みやすい大きな文字サイズで、わかりやすく解説。基本操作を動画でサポート！', 1, 'https://thumbnail.image.rakuten.co.jp/@0_mall/book/cabinet/7783/9784938927783_1_3.jpg?_ex=120x120', '2022-07-19 14:47:16.63', '2022-07-19 14:47:16.63', null),
+        ('9999999999991', 'author1', 'title1', 'desc1', 1, null, null, null, null),
+        ('9999999999992', 'author2', 'title2', 'desc2', 1, null, null, null, null),
+        ('9999999999993', 'author3', 'title3', 'desc3', 1, null, null, null, null),
+        ('9999999999994', 'author4', 'title4', 'desc4', 2, null, null, null, null);

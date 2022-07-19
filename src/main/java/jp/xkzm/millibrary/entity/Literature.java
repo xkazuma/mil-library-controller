@@ -19,7 +19,7 @@ public class Literature {
 
     @JSONField(name = "isbn")
     @Id
-    @Column(name = "isbn")
+    @Column(name = "isbn", unique = true, nullable = false)
     private String isbn;
 
     @JSONField(name = "author")
@@ -30,13 +30,13 @@ public class Literature {
     @Column(name = "title")
     private String title;
 
-    @JSONField(name = "desc")
+    @JSONField(name = "description")
     @Column(name = "description")
     private String description;
 
     @JSONField(name = "image")
     @Column(name = "image")
-    private String imageURL;
+    private String image;
 
     @JSONField(name = "updated")
     @Column(name = "updated")
@@ -51,22 +51,17 @@ public class Literature {
     private Date deleted;
 
 
-    public Literature() {
-
-        this.isbn        = "";
-        this.author      = "";
-        this.title       = "";
-        this.description = "";
-        this.imageURL    = "";
-
-    }
+    public Literature() { }
 
     public Literature(
             String isbn,
             String author,
             String title,
             String description,
-            String imageURL
+            String imageURL,
+            Date   created,
+            Date   updated,
+            Date   deleted
     ){
 
         this.isbn        = isbn;
@@ -75,15 +70,18 @@ public class Literature {
         this.description = description;
         try {
 
-            this.imageURL    = URI.create(imageURL).toURL().toString();
+            this.image = URI.create(imageURL).toURL().toString();
 
         } catch (MalformedURLException e) {
 
-            this.imageURL    = "";
+            this.image    = "";
             e.printStackTrace();
 
         }
 
-    }
+        this.created = created;
+        this.updated = updated;
+        this.deleted = deleted;
 
+    }
 }

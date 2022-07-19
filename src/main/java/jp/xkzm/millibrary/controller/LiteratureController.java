@@ -1,18 +1,19 @@
 package jp.xkzm.millibrary.controller;
 
 import com.alibaba.fastjson.JSON;
+import jp.xkzm.millibrary.dto.LiteratureRequest;
 import jp.xkzm.millibrary.entity.Literature;
 import jp.xkzm.millibrary.service.LiteratureService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
 @RequestMapping("/literatures")
+@RequiredArgsConstructor
 public class LiteratureController {
 
     LiteratureService literatureService;
@@ -24,7 +25,16 @@ public class LiteratureController {
 
     }
 
-    @RequestMapping(value = "/list", method = RequestMethod.GET)
+    @PostMapping(value = "/literature/create")
+    public String create(@RequestBody LiteratureRequest literatureRequest) {
+
+        literatureService.create(literatureRequest);
+
+        return "redirect:/";
+
+    }
+
+    @GetMapping(value = "/list")
     public String getLiteraturesList() {
 
         List<Literature> literatures = this.literatureService.searchAll();
@@ -50,6 +60,4 @@ public class LiteratureController {
         return JSON.toJSONString(literatures);
 
     }
-
-
 }
